@@ -1,25 +1,22 @@
 <?php
 
-  class Model
+  class dbModel
   {
     $conn;
     $servername = "frc353_2@encs.concordia.ca";
     $username = "frc353_2";
     $password = "AQfDNA";
 
-    function connectDB()
-    {
+    function connectDB() {
       $conn = new mysqli($servername, $username, $password);
       // TODO add error in case not connected
     }
 
-    function disconnectDB()
-    {
+    function disconnectDB() {
       $conn->close();
     }
 
-    function findData($query)
-    {
+    function findData($query) {
       // make array for results and connect to db
       $data = array();
       $this->connectDB();
@@ -27,8 +24,7 @@
       $result = $this->$conn->query($query);
 
       // store each row in an arry
-      while($row = $result->fetch_object())
-      {
+      while($row = $result->fetch_object()) {
         $data[] = $row;
       }
 
@@ -36,13 +32,11 @@
       return $data;
     }
 
-    function updateData($query)
-    {
+    function updateData($query) {
 
     }
 
-    function addData($query)
-    {
+    function addData($query) {
 
     }
   }
