@@ -3,7 +3,7 @@
   class dbModel
   {
     $conn;
-    $servername = "frc353_2@encs.concordia.ca";
+    $servername = "frc353.encs.concordia.ca";
     $username = "frc353_2";
     $password = "AQdFNA";
 
