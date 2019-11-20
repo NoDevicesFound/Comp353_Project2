@@ -9,7 +9,8 @@
 
     function connectDB() {
       $conn = new mysqli($servername, $username, $password);
-      // TODO add error in case not connected
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
 
     function disconnectDB() {

@@ -8,8 +8,8 @@
 
 	function validate() {
 		//make query to db to check uname and $pwd
-		$emailQuery = "SELECT uid FROM TABLE User WHERE email = " + $email
-		+ "AND password = " + $pwd;
+		$emailQuery = "SELECT uid FROM TABLE User WHERE email = \"" + $email + "\""
+		+ "AND password = \"" + $pwd + "\"";
 
 		$uid = db.findData($emailQuery);
 
