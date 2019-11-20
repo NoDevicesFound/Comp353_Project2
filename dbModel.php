@@ -5,7 +5,7 @@
     $conn;
     $servername = "frc353_2@encs.concordia.ca";
     $username = "frc353_2";
-    $password = "AQfDNA";
+    $password = "AQdFNA";
 
     function connectDB() {
       $conn = new mysqli($servername, $username, $password);
