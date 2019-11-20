@@ -4,20 +4,20 @@
     <title>Login Page</title>
   </head>
 
-  <body>
+  <div id="loginPage">
     <h1>Login Page</h1>
-    <form>
+    <form method="post" action="login.php">
       <fieldset>
         <p>
           <label>Username</label>
           <input type = "text"
-                 id = "myText"
+                 name = "uname"
                  value = "" />
         </p>
         <p>
           <label>Password</label>
           <input type = "password"
-                  id = "myPwd"
+                  name = "pwd"
                   value = "" />
         </p>
         <p>
@@ -25,5 +25,5 @@
         </p>
       </fieldset>
     </form>
-  </body>
+  </div>
 </html>
