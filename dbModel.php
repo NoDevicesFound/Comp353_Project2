@@ -1,5 +1,4 @@
 <?php
-
   class dbModel
   {
     $conn;
@@ -14,7 +13,7 @@
     }
 
     function disconnectDB() {
-      $conn->close();
+      mysqli->close($conn);
     }
 
     function findData($query) {
@@ -30,11 +29,16 @@
       }
 
       $this->disconnectDB();
-      return $data;
+      $data->close();
+      return $data[0];
     }
 
     function updateData($query) {
+      $this->connectDB();
 
+      $this->$conn->query($query);
+
+      $this->disconnectDB();
     }
 
     function addData($query) {

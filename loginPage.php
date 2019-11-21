@@ -1,8 +1,11 @@
-<!DOCTYPE HTML>
 <html>
   <head>
     <title>Login Page</title>
   </head>
+
+  <?php if(echo $failed) { ?>
+    <div class="error"> Email or password incorrect.")</div>
+  <?php } ?>
 
   <div id="loginPage">
     <h1>Login Page</h1>
